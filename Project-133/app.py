@@ -21,7 +21,7 @@ def Father():
     name = "Sateesh"
     age = "42"
 
-    return render_template('index.html', name = name , age = age)
+    return render_template('father.html', name = name , age = age)
 
 # define the route to mother webpage
 @app.route("/mother")
@@ -30,7 +30,7 @@ def Mother():
     name = "Vani"
     age = "39"
 
-    return render_template('index.html', name = name , age = age)
+    return render_template('mother.html', name = name , age = age)
 
 # define the route to siblings webpage
 @app.route("/brother")
@@ -38,6 +38,12 @@ def Brother():
 
     name = "Gunina"
     age = "5"
+
+    return render_template('brother.html', name = name , age = age)
+
+# run the file
+if __name__  ==  '__main__':
+    app.run(debug=True)
 
     return render_template('index.html', name = name , age = age)
 
